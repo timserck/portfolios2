@@ -1,9 +1,23 @@
-// html { font-size: 62.5%; }
+html { font-size: 62.5%; }
 
 body {
 	font-family: $SourceCode;
-	font-size: 1em; // 16
+	font-size: 1.6rem; // 16
 	font-weight: $normal;
-	line-height: 1.5em; // 24
-	color: $white;
+	line-height: 1.6; // 24
+	color: $black;
+}
+
+h3{
+	  font-size: 2.4rem;
+}
+h2{
+	text-transform: uppercase;
+	    font-size: 5.2rem;
+}
+h3{
+	  font-size: 3.2rem;
+}
+p{
+	font-size: 1.6rem;
 }

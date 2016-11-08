@@ -10,3 +10,7 @@
 
 <link href="img/favicon.png" rel="shortcut icon">
 <link href="img/favicon.ico" rel="shortcut icon">
+
+
+<title></title>
+<meta name="description" content="" />
