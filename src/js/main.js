@@ -1,51 +1,44 @@
 const $ = require("jquery");
 
+class Project {
 
-let ProjetsLink = $('.projects__li--a')
-let ProjetsLinks = $('.projects').find(ProjetsLink);
-let ProjectsImg = document.getElementById("projects__img");
-// console.log(ProjetsLinks);
+	constructor(){
+		this.ProjectsImg = $(".projects__img");
+		this.link = $('.projects__li--a');
+		this.ProjetsLinks = $('.projects').find(this.link);
+	}
 
-let ProjectId = function(){
-	for (var i = ProjetsLinks.length - 1; i >= 0; i--) {
-		ProjetsLinks[i].id = 'img_' + i;
-		// console.log(ProjetsLinks[i].id);
-	};
+
+	ProjectData(){
+		console.log(this.ProjetsLinks)
+		for (var i = this.ProjetsLinks.length - 1; i >= 0; i--) {
+		this.ProjetsLinks[i].dataset.id = `img_${i}`;
+		};
+	}
+
+	ProjectImg(src){
+		let url = `imgs/${src}.jpg`;
+		this.ProjectsImg.attr("src", url);
+	}
+
+	ProjectHover(){
+		let hoverLink = (e) => {
+    	this.link.removeClass('link-hover')
+      	let elem = $(e.currentTarget);
+    	elem.addClass('link-hover');
+    	this.ProjectImg(elem.data('id'));
+    	}
+    
+    this.link.on('mouseover', this.link, hoverLink);
+	}
+
+	ProjectStart(){
+		this.ProjectData();
+		this.ProjectHover();
+	}
+
+
 }
 
-let ProjectImg = function(LinkId){
-	let url = 'imgs/'+LinkId + '.jpg'; 
-	ProjectsImg.src = url;
-}
-
-let ProjectHover = function(){
-	ProjetsLink.hover(function(){
-	ProjetsLink.removeClass('active');
-	let linkHover = 'img_' + $('a').index($(this));
-	$('#' + linkHover).addClass('active');
-
-	ProjectImg(linkHover);
-	});
-}
-
-let projectModule = function(){
-	ProjectId();
-	ProjectHover();
-}
-
-projectModule();
-
-
-
-
-
-
-// var module = require('./monModule.js');
-// module.myvar = 'Hello world';
-// module.test();
-
-
-
-
-
-
+let projectModule = new Project();
+projectModule.ProjectStart();

@@ -7,15 +7,11 @@
 
 <main class="main FlexCenter">
 
-<img src="imgs/img1.jpg" alt="test">
+<img class="projects__img" src="imgs/img_0.jpg" alt="test">
 
 		<ul class="projects FlexUl">
-			<li class="projects__li"><a class="projects__li--a" href="">libia Velo</a></li>
-			<li class="projects__li"><a class="projects__li--a" href="">The little voice</a></li>
-			<li class="projects__li"><a class="projects__li--a" href="">Oldwebsite</a></li>
-			<li class="projects__li"><a class="projects__li--a" href="">Oldwebsite</a></li>
-			<li class="projects__li"><a class="projects__li--a" href="">libia Velo</a></li>
-			<li class="projects__li"><a class="projects__li--a" href="">The little voice</a></li>
+			<li class="projects__li"><a class="projects__li--a" href="#">libia Velo</a></li>
+			<li class="projects__li"><a class="projects__li--a" href="#">The little voice</a></li>
 		</ul>
 		
 
